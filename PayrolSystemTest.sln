@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayrolSystemTest", "PayrolSystemTest\PayrolSystemTest.csproj", "{624279DA-A0B6-4070-84BC-26F013B8D06E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{624279DA-A0B6-4070-84BC-26F013B8D06E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{624279DA-A0B6-4070-84BC-26F013B8D06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{624279DA-A0B6-4070-84BC-26F013B8D06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{624279DA-A0B6-4070-84BC-26F013B8D06E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63FE64DB-5151-46A9-97C6-DFA037460E8C}
+	EndGlobalSection
+EndGlobal
