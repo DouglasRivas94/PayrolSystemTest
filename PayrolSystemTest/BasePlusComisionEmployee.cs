@@ -24,6 +24,7 @@ namespace PayrolSystemTest
                 {
                     throw new ArgumentOutOfRangeException(nameof(value), value, $"{nameof(Basesalary)} must be >= 0");
                 }
+
                 basesalary = value;  
 
             }
