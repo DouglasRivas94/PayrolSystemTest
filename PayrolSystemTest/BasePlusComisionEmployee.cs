@@ -14,24 +14,25 @@ namespace PayrolSystemTest
         {
             basesalary = basesalary;
         }
-
-        public decimal Basesalary 
-        { 
-            get => basesalary; 
-            set 
+         // property that gets and sets BasePlusComissionEmployee's base salary
+        public decimal BaseSalary { get => basesalary;
+            set
             {
-                if(value < 0)
+                if(value < 0) // validation
                 {
-                    throw new ArgumentOutOfRangeException(nameof(value), value, $"{nameof(Basesalary)} must be >= 0");
+                    throw new ArgumentOutOfRangeException(nameof(value),
+                        value, $"{nameof(BaseSalary)} must be >= 0");
                 }
-
-                basesalary = value;  
-
+                basesalary = value;
             }
         }
 
-        public override decimal Earnings() => Basesalary + base.Earnings();
+        // calculate earnings
+        public override decimal Earnings() => BaseSalary + base.Earnings();
 
-        public override string ToString() => base.ToString();
+        // return string representation of BasePlusComissionEmployee
+        public override string ToString() =>
+            $"base-salaried {base.ToString()}\n" +
+            $"base salary: {BaseSalary:C}";
     }
 }

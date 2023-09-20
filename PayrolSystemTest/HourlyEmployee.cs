@@ -41,7 +41,7 @@ namespace PayrolSystemTest
             {
                 if(value < 0 || value > 168)
                 {
-                    throw new ArgumentOutOfRangeException(nameof(value)), value, $"{nameof(Hours1)}must be >=0 and <=168");
+                    throw new ArgumentOutOfRangeException(nameof(value), value, $"{nameof(Hours1)}must be >=0 and <=168");
                 }
                 Hours = value; 
             }

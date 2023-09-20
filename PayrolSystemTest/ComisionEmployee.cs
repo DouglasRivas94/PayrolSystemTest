@@ -14,33 +14,41 @@ namespace PayrolSystemTest
         public ComisionEmployee(string firstname, string lastname, string socialsecuritynumber, decimal grossSales, decimal comisionRate) : base(firstname, lastname, socialsecuritynumber)
         {
             GrossSales = grossSales;
-            ComisionRate = comisionRate;
+            ComissionRate = comisionRate;
         }
 
+        // property that gets and sets comission employee's groos sales
         public decimal GrossSales
         {
             get => grossSales;
             set
             {
+                if (value < 0) // validation
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value),
+                        value, $"{nameof(GrossSales)} must be >= 0");
+                }
                 grossSales = value;
             }
         }
-        public decimal ComisionRate
+
+        // property that gets and sets comission employee's comission rate
+        public decimal ComissionRate
         {
             get => comisionRate;
             set
             {
-                if (value <= 0 || value >= 1)
+                if (value <= 0 || value >= 1) // validation
                 {
-                    throw new ArgumentOutOfRangeException(nameof(value), value, $"{nameof(ComisionRate)} must be > 0 and < 1");
+                    throw new ArgumentOutOfRangeException(nameof(value),
+                        value, $"{nameof(ComissionRate)} must be > 0 and < 1");
                 }
                 comisionRate = value;
             }
-
         }
 
-        public override decimal Earnings() => ComisionRate * GrossSales;
+        public override decimal Earnings() => ComissionRate * GrossSales;
 
-        public override string ToString() => $"cOMISION EMPLOYEE: {base.ToString()}\n" + $"gross sales: {GrossSales:C}\n" + $"Comision rate {ComisionRate:F2}";
+        public override string ToString() => $"cOMISION EMPLOYEE: {base.ToString()}\n" + $"gross sales: {GrossSales:C}\n" + $"Comision rate {ComissionRate:F2}";
     }
 }
