@@ -16,8 +16,8 @@ namespace PayrolSystemTest
         //Three parameter constructor
         public Employee(string firstname, string lastname, string socialsecuritynumber)
         {
-            firstname = firstname;
-            lastname = lastname;
+            Firstname = firstname;
+            Lastname = lastname;
             SocialSecurityNumber = socialsecuritynumber;
         }
 

@@ -12,7 +12,7 @@ namespace PayrolSystemTest
         public BasePlusComisionEmployee(string firstname, string lastname, string socialsecuritynumber, decimal grossSales, decimal comisionRate, decimal basesalary) 
             : base(firstname, lastname, socialsecuritynumber, grossSales, comisionRate)
         {
-            basesalary = basesalary;
+            this.basesalary = basesalary;
         }
          // property that gets and sets BasePlusComissionEmployee's base salary
         public decimal BaseSalary { get => basesalary;
