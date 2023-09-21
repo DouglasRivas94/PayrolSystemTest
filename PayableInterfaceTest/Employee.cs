@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PayrolSystemTest
+namespace PayableInterfaceTest
 {
-    //Employee abstract base class
+    //Employee abstract base class that implement interface IPayable
     public abstract class Employee : IPayable
     {
         public string Firstname { get; }
