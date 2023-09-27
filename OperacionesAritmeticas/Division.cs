@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace OperacionesAritmeticas
 {
-    internal class Resta : IOperaciones
+    public class Division : IOperaciones
     {
         public decimal GetOperacion { get; set; }
 
         public void calculo(decimal a, decimal b)
         {
-            GetOperacion = a -b;
+            GetOperacion = a/b;
         }
     }
 }

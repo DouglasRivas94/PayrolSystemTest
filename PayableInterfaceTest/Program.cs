@@ -16,3 +16,14 @@ foreach (var payable in payableObjects)
     Console.WriteLine($"{payable}");
     Console.WriteLine($"pAYMENT DUE: {payable.GetPaymentAmount():C}\n");
 }
+
+/*****************************************************************************************************************/
+
+using (IPayableSerialize serializer = new PayableFileSerialize())
+{
+    serializer.WritePayableObjects(payableObjects);
+}
+using (IPayableSerialize serializer = new ExcellSerializer())
+{
+    serializer.WritePayableObjects(payableObjects);
+}

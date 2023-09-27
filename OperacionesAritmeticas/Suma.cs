@@ -6,12 +6,18 @@ using System.Threading.Tasks;
 
 namespace OperacionesAritmeticas
 {
-    public class Suma : Numeros
+    public class Suma : IOperaciones
     {
-        public Suma(decimal N1, decimal N2) : base(N1, N2)
+        public decimal GetOperacion { get; set; }
+
+        public void calculo(decimal a, decimal b)
         {
+            GetOperacion = a + b;
         }
 
-        public override decimal Respuesta() => A + B;
+        public void mostrar()
+        {
+            Console.WriteLine("El resultado de la suma es: {0}", GetOperacion);
+        }
     }
 }

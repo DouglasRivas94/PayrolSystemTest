@@ -8,6 +8,13 @@ namespace OperacionesAritmeticas
 {
     public interface IOperaciones
     {
-        decimal GetOperacion();
+        decimal GetOperacion { get; set; }
+
+        void calculo(decimal a, decimal b);
+
+        void mostrar()
+        {
+            Console.WriteLine("El resultado es {0}", GetOperacion);
+        }
     }
 }
